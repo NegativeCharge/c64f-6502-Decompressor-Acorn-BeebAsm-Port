@@ -50,11 +50,13 @@ SAVE "C64F", start, end, entry_point
 PRINT "------------------------"
 PRINT "   c64f Decompressor    "
 PRINT "------------------------"
-PRINT "CODE size      = ", ~end-start
+PRINT "CODE size         = ", ~end-start
+PRINT "DECOMPRESSOR SIZE = ", entry_point-start, "bytes"
+PRINT "ZERO PAGE SIZE    = ", zp_end-zp_start, "bytes"
 PRINT "------------------------"
-PRINT "LOAD ADDR      = ", ~start
-PRINT "HIGH WATERMARK = ", ~P%
-PRINT "RAM BYTES FREE = ", ~LOAD_ADDR-P%
+PRINT "LOAD ADDR         = ", ~start
+PRINT "HIGH WATERMARK    = ", ~P%
+PRINT "RAM BYTES FREE    = ", ~LOAD_ADDR-P%
 PRINT "------------------------"
 
 PUTBASIC "loader.bas","LOADER"
